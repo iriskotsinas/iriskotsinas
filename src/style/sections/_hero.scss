@@ -1,6 +1,6 @@
 #hero {
-  min-height: 80vh;
-  height: 80vh;
+  min-height: 85vh;
+  height: 85vh;
   display: inline-block;
   align-items: center;
   border-bottom: 0px;
@@ -29,7 +29,7 @@
     font-weight: 700;
     margin-bottom: 3.2rem;
     text-align: center;
-    padding-top: 20rem;
+    padding-top: 30rem;
 
     @include respond(tab-land) {
       font-size: 8rem;
@@ -38,16 +38,16 @@
     @include respond(tab-port) {
       font-size: 6.4rem;
       text-align: center;
-      padding-top: 5rem;
+      padding-top: 20rem;
     }
     @include respond(phone) {
       font-size: 5rem;
       line-height: 1.5;
-      padding-top: 10rem;
+      padding-top: 20rem;
     }
     @include respond(phone-xs) {
       font-size: 4rem;
-      padding-top: 10rem;
+      padding-top: 20rem;
     }
   }
 
@@ -100,12 +100,12 @@
   .chevron-down-container {
     display: flex;
     justify-content: center;
-    padding: 5rem 0.2rem;
+    padding: 10rem 5rem;
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 10rem;
 
     @include respond(tab-land) {
-      margin-top: 4rem;
+      margin-top: 10rem;
     }
     @include respond(tab-port) {
       margin-top: 1rem;

@@ -10,7 +10,7 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Iris Portfolio</title>
+        <title>Iris Kotsinas</title>
         <html lang="en" />
         <meta name="description" content="Iris Portfolio" />
       </Helmet>

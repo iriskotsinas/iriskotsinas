@@ -11,8 +11,8 @@
   color: $white-color;
   height: 100%;
   border-top: 0px;
-  padding-bottom: 12rem;
-  padding-top: 10rem;
+  // padding-bottom: 12rem;
+  padding-top: 15rem;
 
   @include respond(tab-land) {
     height: 100%;

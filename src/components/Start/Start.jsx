@@ -27,10 +27,14 @@ const Header = () => {
             {/* {title || 'Welcome'}{' '} */}
             <span className="text-color-main">Iris Kotsinas</span>
             <br />
-            <span className="text-color-second">Personal portfolio</span>
+            {/* <span className="text-color-second">Portfolio</span> */}
+            {/* <br /> */}
+            <p className="text-color-third">
+              Final year M.Sc. student in Media Technology and Engineering
+            </p>
           </h1>
         </Fade>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+        {/* <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
             <span className="links">
               <Link to="about" smooth duration={1000}>
@@ -44,7 +48,7 @@ const Header = () => {
               </Link>
             </span>
           </p>
-        </Fade>
+        </Fade> */}
       </Container>
       <Container>
         <div className="chevron-down-container">
