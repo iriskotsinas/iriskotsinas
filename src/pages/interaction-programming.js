@@ -17,6 +17,7 @@ const item = {
   report: '',
   sourcecode: repoCreditCard,
   simulation: '',
+  description2: '',
 };
 
 export default function InteractionProgramming() {

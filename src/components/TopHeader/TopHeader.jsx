@@ -18,8 +18,11 @@ const TopHeader = (isStartPage) => {
             About me
           </Link>
         )}
-        <Link id="headerLink" to="/work">
+        <Link id="headerLink" to="/portfolio">
           Portfolio
+        </Link>
+        <Link id="headerLink" to="/work">
+          Projects
         </Link>
         <ReactLink id="headerLink" to="contact" smooth duration={1000}>
           Contact

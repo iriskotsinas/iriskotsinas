@@ -87,3 +87,23 @@
 .up i {
   color: #272727;
 }
+
+.sort {
+  padding: 10px;
+  margin: 5px;
+  margin-top: 20px;
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
+  font-size: 12px;
+  background-color: white;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: white;
+  }
+}
+
+#selected {
+  background-color: $secondary-color;
+  color: white;
+}

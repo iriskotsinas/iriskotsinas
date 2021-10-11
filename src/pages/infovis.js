@@ -18,6 +18,7 @@ const item = {
   report: Pdf2,
   sourcecode: repo,
   simulation: '',
+  description2: '',
 };
 
 export default function InfoVis() {

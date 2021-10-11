@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import ContactSection from '../ContactSection/ContactSection';
 import Contact from '../Contact/Contact';
 
-const ProjectInfo = (project) => {
+const ProjectInfo = ({ item, isSpecial }) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -29,30 +30,51 @@ const ProjectInfo = (project) => {
             </Link>
             <Fade left={isDesktop} bottom={isMobile} duration={500} delay={250} distance="30px">
               <h2 className="section-title" id="portfolio">
-                {project.item.title}
+                {item.title}
               </h2>
-              <p className="projectText">{project.item.description}</p>
+              <p className="projectText">{item.description}</p>
+              <p className="projectText">{item.description2}</p>
               <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
                 <br />
                 <p className="hero-cta">
                   <span className="links">
-                    {project.item.report ? (
+                    {item.link ? (
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn text-color-main"
-                        href={project.item.report}
+                        href={item.link}
+                      >
+                        Easy Booking PRO documentation
+                      </a>
+                    ) : null}
+                    {item.link2 ? (
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn text-color-main"
+                        href={item.link2}
+                      >
+                        Easy Booking PRO distribution algorithm documentation
+                      </a>
+                    ) : null}
+                    {item.report ? (
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn text-color-main"
+                        href={item.report}
                       >
                         Report
                       </a>
                     ) : null}
-                    {project.item.report1 ? (
+                    {item.report1 ? (
                       <>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
-                          href={project.item.report1}
+                          href={item.report1}
                         >
                           Report lab 1
                         </a>
@@ -60,7 +82,7 @@ const ProjectInfo = (project) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
-                          href={project.item.report2}
+                          href={item.report2}
                         >
                           Report lab 2
                         </a>
@@ -68,7 +90,7 @@ const ProjectInfo = (project) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
-                          href={project.item.report3}
+                          href={item.report3}
                         >
                           Report lab 3
                         </a>
@@ -76,7 +98,7 @@ const ProjectInfo = (project) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
-                          href={project.item.report4}
+                          href={item.report4}
                         >
                           Report lab 4
                         </a>
@@ -84,38 +106,46 @@ const ProjectInfo = (project) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
-                          href={project.item.report6}
+                          href={item.report5}
+                        >
+                          Report lab 5
+                        </a>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn text-color-main"
+                          href={item.report6}
                         >
                           Report lab 6
                         </a>
                       </>
                     ) : null}
-                    {project.item.sourcecode ? (
+                    {item.sourcecode ? (
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn text-color-main"
-                        href={project.item.sourcecode}
+                        href={item.sourcecode}
                       >
                         Source code
                       </a>
                     ) : null}
-                    {project.item.video ? (
+                    {item.video ? (
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn text-color-main"
-                        href={project.item.video}
+                        href={item.video}
                       >
                         Video
                       </a>
                     ) : null}
-                    {project.item.simulation ? (
+                    {item.simulation ? (
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn text-color-main"
-                        href={project.item.simulation}
+                        href={item.simulation}
                       >
                         Simulation
                       </a>
@@ -125,17 +155,15 @@ const ProjectInfo = (project) => {
                 <br />
               </Fade>
             </Fade>
-            {project.isSpecial ? (
+            {isSpecial ? (
               <>
-                <img id="fullImg" alt="project" src={project.item.image} />
-                {project.item.figureText ? <p id="figureText">{project.item.figureText}</p> : null}
+                <img id="fullImg" alt="project" src={item.image} />
+                {item.figureText ? <p id="figureText">{item.figureText}</p> : null}
               </>
             ) : (
-              <img id="normalImg" alt="project" src={project.item.image} />
+              <img id="normalImg" alt="project" src={item.image} />
             )}
-            {project.item.image2 ? (
-              <img id="normalImg" alt="project" src={project.item.image2} />
-            ) : null}
+            {item.image2 ? <img id="normalImg" alt="project" src={item.image2} /> : null}
           </div>
         </Container>
       </section>
@@ -143,6 +171,31 @@ const ProjectInfo = (project) => {
       <Contact />
     </div>
   );
+};
+
+ProjectInfo.propTypes = {
+  item: PropTypes.exact({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    description2: PropTypes.string,
+    image: PropTypes.any,
+    image2: PropTypes.any,
+    slug: PropTypes.string,
+    video: PropTypes.any,
+    report: PropTypes.any,
+    report1: PropTypes.any,
+    report2: PropTypes.any,
+    report3: PropTypes.any,
+    report4: PropTypes.any,
+    report5: PropTypes.any,
+    report6: PropTypes.any,
+    sourcecode: PropTypes.string,
+    link: PropTypes.string,
+    link2: PropTypes.string,
+    simulation: PropTypes.string,
+    figureText: PropTypes.string,
+  }),
+  isSpecial: PropTypes.bool,
 };
 
 export default ProjectInfo;

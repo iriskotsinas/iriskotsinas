@@ -19,6 +19,7 @@ const item = {
   report: Pdf,
   simulation: '',
   sourcecode: repo,
+  description2: '',
 };
 
 export default function Domesday() {
@@ -31,7 +32,7 @@ export default function Domesday() {
         <meta name="description" content="Iris Portfolio" />
       </Helmet>
       <TopHeader isStartPage={false} />
-      <ProjectInfo item={item} />
+      <ProjectInfo item={item} isSpecial={false} />
       <SideBarButton showBelow={70} />
     </>
   );

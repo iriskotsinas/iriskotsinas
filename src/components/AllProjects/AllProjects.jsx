@@ -5,6 +5,7 @@ import Project from '../Project';
 const AllProjects = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [sort, setSort] = useState('all');
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -25,6 +26,7 @@ const AllProjects = () => {
       slug: '/upsales',
       report: '',
       sourcecode: '',
+      type: ['all', 'web', 'intern'],
     },
     {
       title: 'Modelling and Animation',
@@ -34,6 +36,7 @@ const AllProjects = () => {
       slug: '/modelling-animation',
       report: '',
       sourcecode: '',
+      type: ['all', 'cg'],
     },
     {
       title: 'Cleanpipe website - We Know IT',
@@ -43,6 +46,7 @@ const AllProjects = () => {
       slug: '/cleanpipe',
       report: '',
       sourcecode: '',
+      type: ['all', 'web'],
     },
     {
       title: 'Domesday - B.Sc. project Linköping University',
@@ -53,6 +57,7 @@ const AllProjects = () => {
       slug: '/domesday',
       report: '',
       sourcecode: '',
+      type: ['all', 'cg', 'web', 'games'],
     },
     {
       title: 'Boids - Simulation of animal flocking behaviour',
@@ -63,6 +68,7 @@ const AllProjects = () => {
       slug: '/boids',
       report: '',
       sourcecode: '',
+      type: ['all', 'cg', 'web', 'vis', 'ml'],
     },
     {
       title: 'Global Illumination and Rendering project',
@@ -72,6 +78,7 @@ const AllProjects = () => {
       slug: '/global-illumination',
       report: '',
       sourcecode: '',
+      type: ['all', 'cg'],
     },
     {
       title: 'Summer internship at Axis Communications',
@@ -81,6 +88,7 @@ const AllProjects = () => {
       slug: '/axis',
       report: '',
       sourcecode: '',
+      type: ['all', 'web', 'intern'],
     },
     {
       title: 'Machine Learning for Social Media project',
@@ -90,6 +98,7 @@ const AllProjects = () => {
       slug: '/spotify-project',
       report: '',
       sourcecode: '',
+      type: ['all', 'web', 'ml'],
     },
     {
       title: 'Game of Kåken - 3D Computer Graphics',
@@ -100,6 +109,7 @@ const AllProjects = () => {
       slug: '/kaken',
       report: '',
       sourcecode: '',
+      type: ['all', 'cg', 'vis'],
     },
     {
       title: 'Information Visualization project',
@@ -109,6 +119,17 @@ const AllProjects = () => {
       slug: '/infovis',
       report: '',
       sourcecode: '',
+      type: ['all', 'web', 'vis'],
+    },
+    {
+      title: 'Advanced Web Programming',
+      description:
+        'A project made in the course TDDD27 Advanced Web Programming. My partner and I created a CrossFit booking system. The frontend was developed with Vue and SCSS, and the backend in TypeScript with Node.js.',
+      image: 'crossfit2.png',
+      slug: '/crossfit-booking',
+      report: '',
+      sourcecode: '',
+      type: ['all', 'web'],
     },
     {
       title: 'Structural Methods for User Experience (UX)',
@@ -118,14 +139,16 @@ const AllProjects = () => {
       slug: '/ux-project',
       report: '',
       sourcecode: '',
+      type: ['all', 'web'],
     },
-    {
-      title: 'Interaction Programming',
-      image: 'creditcard.png',
-      slug: '/interaction-programming',
-      report: '',
-      sourcecode: '',
-    },
+    // {
+    //   title: 'Interaction Programming',
+    //   image: 'creditcard.png',
+    //   slug: '/interaction-programming',
+    //   report: '',
+    //   sourcecode: '',
+    //   type: ['all', 'web'],
+    // },
     {
       title: 'Diatot - Communication and User Interfaces',
       description:
@@ -134,6 +157,30 @@ const AllProjects = () => {
       slug: '/diatot',
       report: '',
       sourcecode: '',
+      type: ['all', 'web'],
+    },
+  ];
+
+  const options = [
+    {
+      name: 'All',
+      tag: 'all',
+    },
+    {
+      name: 'Computer Graphics',
+      tag: 'cg',
+    },
+    {
+      name: 'Web',
+      tag: 'web',
+    },
+    {
+      name: 'Games',
+      tag: 'games',
+    },
+    {
+      name: 'Machine Learning / AI',
+      tag: 'ml',
     },
   ];
 
@@ -141,16 +188,36 @@ const AllProjects = () => {
     <section>
       <Fade left={isDesktop} bottom={isMobile} duration={500} delay={250} distance="30px">
         <h2 className="section-title" id="portfolio">
-          Portfolio
+          Projects
         </h2>
         <p id="sub">
           A selection of my work can be found below. Press the items to find out more about each
           project.
         </p>
+        <div className="options">
+          {options.map((option) => (
+            <>
+              {option.tag === sort ? (
+                <button
+                  type="button"
+                  className="sort"
+                  id="selected"
+                  onClick={() => setSort(option.tag)}
+                >
+                  {option.name}
+                </button>
+              ) : (
+                <button type="button" className="sort" onClick={() => setSort(option.tag)}>
+                  {option.name}
+                </button>
+              )}
+            </>
+          ))}
+        </div>
       </Fade>
       <div className="projectItems">
         {items.map((item) => (
-          <Project key={item.title} item={item} />
+          <>{item.type.includes(sort) ? <Project key={item.title} item={item} /> : null}</>
         ))}
       </div>
     </section>

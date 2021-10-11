@@ -13,7 +13,9 @@ const websiteBoids = 'http://www.student.itn.liu.se/~jacmo699/MT3/tnm085/boids/'
 const item = {
   title: 'Boids - Simulation of animal flocking behaviour',
   description:
-    'The project, created spring 2020 in the course TNM085 Modeling Project, is a simulation of animal flocking behaviour, also known as Boids. The simulation was first implemented in MATLAB, and thereafter in JavaScript with three.js.',
+    'The project, created during spring 2020 in the course TNM085 Modeling Project, is a simulation of animal flocking behaviour, also known as Boids. The simulation was first implemented in MATLAB in 2D, and thereafter in JavaScript with three.js.',
+  description2:
+    'The project was conducted in collaboration with three project partners, and we worked together every step of the way to ensure that everyone understood the assignment.',
   image: 'boids-simulation.png',
   image2: 'boids-sim.png',
   slug: '/boids',
@@ -21,6 +23,7 @@ const item = {
   sourcecode: repoBoids,
   simulation: websiteBoids,
   video: '',
+  isSpecial: false,
 };
 
 export default function Boids() {

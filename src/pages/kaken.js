@@ -13,7 +13,9 @@ const video3D =
 const item = {
   title: 'Game of Kåken',
   description:
-    'Game of Kåken was a group project in the course TNM061 - 3D Computer Graphics, created spring 2019. We made a Game of Thrones inspired intro, depicting the building Kåkenhus at Campus Norrköping emerging from the ground. The blueprints of the building was used to create a scalable model. 3D-modelling was created in 3DsMax.',
+    'Game of Kåken was a group project in the course TNM061 - 3D Computer Graphics, created in spring 2019. The group consisted of six students, and we made a Game of Thrones inspired intro, depicting the building Kåkenhus at Campus Norrköping emerging from the ground. The blueprints of the building was used to create a scalable model, and the 3D-modelling was created in 3DsMax.',
+  description2:
+    'My contribution to the project was specifically creating the different blocks of the building with realistic heights, as well as adding texture to them. I also created the landscape, water, and light in the scene. Finally, I created the animations and matched them with the music.',
   image: 'kaken1.jpg',
   image2: 'kaken2.jpg',
   slug: '/kaken',
@@ -21,6 +23,7 @@ const item = {
   report: Pdf3,
   sourcecode: '',
   video: video3D,
+  isSpecial: false,
 };
 
 export default function Kaken() {

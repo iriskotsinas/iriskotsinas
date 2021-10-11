@@ -10,15 +10,16 @@ const item = {
   title: 'Cleanpipe website - We Know IT',
   description:
     "As a software engineer at the student run IT-consultancy firm We Know IT I played a major part in developing Cleanpipe's new website during the spring 2021, which will soon launch. The website was developed with Strapi.js and Next.js in Typescript.",
-  image: 'cleanpipe.png',
+  image: 'Cleanpipe.png',
   slug: '/cleanpipe',
   report: '',
   sourcecode: '',
   simulation: '',
   video: '',
+  description2: '',
 };
 
-export default function Boids() {
+export default function Cleanpipe() {
   return (
     <>
       <Helmet>
@@ -28,7 +29,7 @@ export default function Boids() {
         <meta name="description" content="Iris Portfolio" />
       </Helmet>
       <TopHeader isStartPage={false} />
-      <ProjectInfo item={item} />
+      <ProjectInfo item={item} isSpecial={false} />
       <SideBarButton showBelow={70} />
     </>
   );

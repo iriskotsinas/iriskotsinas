@@ -17,6 +17,7 @@ const item = {
   report: Pdf4,
   sourcecode: '',
   simulation: '',
+  description2: '',
 };
 
 export default function UXProject() {

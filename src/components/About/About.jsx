@@ -31,14 +31,14 @@ const About = () => {
       <Container className="about-container">
         <Title title="About Me" />
         <Row className="about-wrapper">
-          <Col md={6} sm={12}>
+          <Col md={5} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
                 <Image alt="profile picture" filename={img} />
               </div>
             </Fade>
           </Col>
-          <Col md={6} sm={12}>
+          <Col md={7} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
@@ -51,8 +51,7 @@ const About = () => {
                   active in several extracurricular activities and I also enjoy working as a
                   laboratory assistant in various courses. I love sports, especially lacrosse, and I
                   played in the Swedish women’s national lacrosse team at the European Championship
-                  2019 in Netanya, Israel. I’m very interested in software and game development, and
-                  love movies, animation and coding.
+                  2019 in Netanya, Israel.
                 </p>
                 <p className="about-wrapper__info-text">
                   I have previously worked as a software engineer intern at both Axis Communications
@@ -60,6 +59,12 @@ const About = () => {
                   surveillance cameras, and at Upsales I further developed their booking system Easy
                   Booking. It was an exciting learning experience and made me more eager to pursue
                   my interest for software development.
+                </p>
+                <p className="about-wrapper__info-text">
+                  I have always loved movies and movie soundtracks, and the possibility to work with
+                  film creation was my main motivation for applying to Media Technology. I therefore
+                  strive to apply and develop my skills within computer graphics, and I am always
+                  open for new opportunities and challenges, especially within the VFX-industry.
                 </p>
                 <p className="about-wrapper__info-text">
                   My resume is linked below if you are interested in finding out more about me.

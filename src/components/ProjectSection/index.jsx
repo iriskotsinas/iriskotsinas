@@ -25,7 +25,7 @@ const ProjectSection = () => {
           <Fade left={isDesktop} bottom={isMobile} duration={500} delay={0} distance="30px">
             <div className="projects-wrapper__info">
               <span className="d-flex mt-3">
-                <Link to="/work" className="cta-btn cta-btn--resume">
+                <Link to="/portfolio" className="cta-btn cta-btn--resume">
                   View my portfolio
                 </Link>
               </span>

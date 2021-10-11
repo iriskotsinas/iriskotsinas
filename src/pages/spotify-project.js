@@ -18,6 +18,7 @@ const item = {
   report: Pdf5,
   sourcecode: spotifyRepo,
   simulation: '',
+  description2: '',
 };
 
 export default function SpotifyProject() {
