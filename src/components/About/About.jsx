@@ -6,7 +6,7 @@ import { mdiChevronDown } from '@mdi/js';
 import { Link } from 'react-scroll';
 import Title from '../Title/Title';
 import Image from '../Image/Image';
-import Pdf from '../../files/iris-kotsinas-cv-2021-sep.pdf';
+import Pdf from '../../files/iris-kotsinas-cv-2021-okt.pdf';
 
 const About = () => {
   const img = 'IMG_0034.png';
@@ -49,22 +49,22 @@ const About = () => {
                   I am an ambitious student who likes to stay busy. I am currently a Software
                   Developer at We Know IT, a student-run IT-consultancy firm. I have previously been
                   active in several extracurricular activities and I also enjoy working as a
-                  laboratory assistant in various courses. I love sports, especially lacrosse, and I
-                  played in the Swedish women’s national lacrosse team at the European Championship
-                  2019 in Netanya, Israel.
+                  laboratory assistant in various courses. Staying active is important to me, and I
+                  am a proud player for the Swedish national lacrosse team.
                 </p>
                 <p className="about-wrapper__info-text">
                   I have previously worked as a software engineer intern at both Axis Communications
                   and Upsales. At Axis I got the opportunity to develop a new software for their
                   surveillance cameras, and at Upsales I further developed their booking system Easy
-                  Booking. It was an exciting learning experience and made me more eager to pursue
-                  my interest for software development.
+                  Booking. They both were exciting learning experiences which have given me valuable
+                  insights into different working methods.
                 </p>
                 <p className="about-wrapper__info-text">
-                  I have always loved movies and movie soundtracks, and the possibility to work with
-                  film creation was my main motivation for applying to Media Technology. I therefore
-                  strive to apply and develop my skills within computer graphics, and I am always
-                  open for new opportunities and challenges, especially within the VFX-industry.
+                  I love film soundtracks, and I have always loved films and games because of the
+                  visual storytelling. The possibility to work in the film or game industry was one
+                  of my main motivations for applying to Media Technology. I therefore strive to
+                  apply and develop my skills within computer graphics, and I am always open for new
+                  opportunities and challenges, especially within the VFX- or game industry.
                 </p>
                 <p className="about-wrapper__info-text">
                   My resume is linked below if you are interested in finding out more about me.

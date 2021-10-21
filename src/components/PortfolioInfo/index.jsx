@@ -12,6 +12,7 @@ import pdf5 from '../../files/TNM079___Modeling_And_Animation__Lab_5.pdf';
 import pdf6 from '../../files/TNM079___Modeling_And_Animation__Lab_6.pdf';
 import Pdf2 from '../../files/TNCG15__Global_Illumination_and_Rendering.pdf';
 import Pdf4 from '../../files/TNM085_Boids_simulation.pdf';
+import Pdf from '../../files/TNM094_slutrapport.pdf';
 
 const repoBoids = 'https://github.com/iriskotsinas/TNM085-Boids-simulation';
 const websiteBoids = 'http://www.student.itn.liu.se/~jacmo699/MT3/tnm085/boids/';
@@ -60,6 +61,32 @@ const items = [
     isSpecial: false,
   },
   {
+    title: 'Domesday - B.Sc. project Linköping University',
+    description:
+      'The project, created spring 2020, resulted in a multiplayer game for 50 to 100 players where each player connects to the game through a mobile phone device. Each character is a diver whos mission is to gather plastics in an ocean where the environment is designed to best grasp the format of the dome screen. The game was developed using C++ and OpenGL, and communication was handled with node.js and websockets. The internal projection in the dome theater was handled by the tool SGCT that was provided by Linköping University. The game was designed as entertainment before the actual dome screen showing at Visualiseringscenter C in Norrköping.',
+    description2:
+      'My contribution to the project was specifically the handling of the communication between the game and webserver, as well as the handling of the steering data and the different colors of the players in the game, together with another team member. The steering was especially interesting to implement since it required consideration of the shape of the dome.',
+    image: 'diver.png',
+    image2: 'domen.jpg',
+    slug: '/kaken',
+    simulation: '',
+    report: Pdf,
+    sourcecode: 'https://github.com/iriskotsinas/DomeDagen',
+    video: '',
+    isSpecial: false,
+  },
+  {
+    title: 'Advanced Global Illumination and Rendering',
+    description:
+      'In the course TNCG15 - Advanced Global Illumination and Rendering, fall 2020, I created a renderer in C++, together with my project partner. The renderer is a Monte Carlo ray tracer and can handle diffuse and specular objects. Two of the objects have Lambertian reflectors which absorbs the light, and the third object has a perfect reflector that reflects all rays hitting the object. The course also discussed caustics and other rendering methods.',
+    image: 'GI-project.png',
+    slug: '/globalillumination',
+    report: Pdf2,
+    sourcecode: '',
+    simulation: '',
+    isSpecial: false,
+  },
+  {
     title: 'Game of Kåken',
     description:
       'Game of Kåken was a group project in the course TNM061 - 3D Computer Graphics, created in spring 2019. The group consisted of six students, and we made a Game of Thrones inspired intro, depicting the building Kåkenhus at Campus Norrköping emerging from the ground. The blueprints of the building was used to create a scalable model, and the 3D-modelling was created in 3DsMax.',
@@ -72,17 +99,6 @@ const items = [
     report: Pdf3,
     sourcecode: '',
     video: video3D,
-    isSpecial: false,
-  },
-  {
-    title: 'Advanced Global Illumination and Rendering',
-    description:
-      'In the course TNCG15 - Advanced Global Illumination and Rendering, fall 2020, I created a renderer in C++, together with my project partner. The renderer is a Monte Carlo ray tracer and can handle diffuse and specular objects. Two of the objects have Lambertian reflectors which absorbs the light, and the third object has a perfect reflector that reflects all rays hitting the object. The course also discussed caustics and other rendering methods.',
-    image: 'GI-project.png',
-    slug: '/globalillumination',
-    report: Pdf2,
-    sourcecode: '',
-    simulation: '',
     isSpecial: false,
   },
 ];

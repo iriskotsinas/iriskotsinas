@@ -111,16 +111,16 @@ const AllProjects = () => {
       sourcecode: '',
       type: ['all', 'cg', 'vis'],
     },
-    {
-      title: 'Information Visualization project',
-      description:
-        'Project in the course TNM108 Machine Learning for Social Media. We created a program to classify christmas songs. We used the Spotify Web API and Spotipy to collect playlist data. The test and training data consisted of christmas songs and songs of different genres. Three different machine learning models were used and compared, Decision Tree Classifier, K-Nearest Neighbor Classifier and Random Forest Classifier. We used the Spotify Web API and Spotipy. The project was implemented in Python.',
-      image: 'infovis2.png',
-      slug: '/infovis',
-      report: '',
-      sourcecode: '',
-      type: ['all', 'web', 'vis'],
-    },
+    // {
+    //   title: 'Information Visualization project',
+    //   description:
+    //     'Project in the course TNM108 Machine Learning for Social Media. We created a program to classify christmas songs. We used the Spotify Web API and Spotipy to collect playlist data. The test and training data consisted of christmas songs and songs of different genres. Three different machine learning models were used and compared, Decision Tree Classifier, K-Nearest Neighbor Classifier and Random Forest Classifier. We used the Spotify Web API and Spotipy. The project was implemented in Python.',
+    //   image: 'infovis2.png',
+    //   slug: '/infovis',
+    //   report: '',
+    //   sourcecode: '',
+    //   type: ['all', 'web', 'vis'],
+    // },
     {
       title: 'Advanced Web Programming',
       description:
@@ -149,16 +149,16 @@ const AllProjects = () => {
     //   sourcecode: '',
     //   type: ['all', 'web'],
     // },
-    {
-      title: 'Diatot - Communication and User Interfaces',
-      description:
-        'Group project in the course TNM040 - Communication and User Interfaces created fall 2018. A mobile phone adapted website for diabetics to record the blood sugar and carbohydrate intake to calculate a bolus dose of insulin. Implemented in JavaScript and React.',
-      image: 'diatotfull.png',
-      slug: '/diatot',
-      report: '',
-      sourcecode: '',
-      type: ['all', 'web'],
-    },
+    // {
+    //   title: 'Diatot - Communication and User Interfaces',
+    //   description:
+    //     'Group project in the course TNM040 - Communication and User Interfaces created fall 2018. A mobile phone adapted website for diabetics to record the blood sugar and carbohydrate intake to calculate a bolus dose of insulin. Implemented in JavaScript and React.',
+    //   image: 'diatotfull.png',
+    //   slug: '/diatot',
+    //   report: '',
+    //   sourcecode: '',
+    //   type: ['all', 'web'],
+    // },
   ];
 
   const options = [
