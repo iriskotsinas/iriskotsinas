@@ -60,11 +60,11 @@ const About = () => {
                   insights into different working methods.
                 </p>
                 <p className="about-wrapper__info-text">
-                  I love film soundtracks, and I have always loved films and games because of the
-                  visual storytelling. The possibility to work in the film or game industry was one
-                  of my main motivations for applying to Media Technology. I therefore strive to
-                  apply and develop my skills within computer graphics, and I am always open for new
-                  opportunities and challenges, especially within the VFX- or game industry.
+                  I have always loved films and games because of the visual storytelling. The
+                  possibility to work in the film or game industry was one of my main motivations
+                  for applying to Media Technology. I therefore strive to apply and develop my
+                  skills within computer graphics, and I am always open for new opportunities and
+                  challenges, especially within the VFX-, visualization or game industry.
                 </p>
                 <p className="about-wrapper__info-text">
                   My resume is linked below if you are interested in finding out more about me.

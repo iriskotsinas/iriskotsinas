@@ -26,14 +26,17 @@
   
     @include respond(tab-port) {
       padding: 0 30px;
+      font-size: 14px;
     }
   
     @include respond(phone) {
       padding: 0;
+      font-size: 12px;
     }
   
     @include respond(phone-xs) {
       padding: 0;
+      font-size: 12px;
     }
 
     &:hover {
